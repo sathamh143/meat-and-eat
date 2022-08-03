@@ -271,34 +271,30 @@
         text-align: center;
     }
     
-    .container {
+    .containers {
         width: 600px;
+        min-height: 100%;
         display: flex;
+        margin-left: 450px;
         text-align: center;
-        justify-items: center;
         position: relative;
-    }
-    
-    .container.card {
-        width: 100%;
-        overflow: scroll;
-        background-color: grey;
+        background-color: aqua;
+        transition: all 1s ease;
     }
     
     .card {
         width: 50%;
-        height: 50vh;
+        height: 350px;
         text-align: center;
         background-color: antiquewhite;
         margin: 10px;
         border-radius: 6%;
-        overflow: scroll 10px;
     }
     
     .card-image {
         margin-bottom: 15px;
         background-size: cover;
-        margin: 5 px;
+        margin: 5px;
         padding: 10px;
     }
     
@@ -336,6 +332,8 @@
         width: 60px;
         color: white;
         background-color: red;
+        border: 2px solid whitesmoke;
+        border-radius: 35%;
     }
     
     .name {
@@ -354,4 +352,39 @@
     
     .br {
         font-size: larger;
+    }
+    
+    .button {
+        display: flex;
+        margin: 20px;
+        justify-items: center;
+        margin-left: 700px;
+    }
+    
+    .button label {
+        width: 15px;
+        height: 15px;
+        background-color: black;
+        margin: 0 4px;
+        border-radius: 35%;
+    }
+    
+    .button label.active {
+        width: 35px;
+    }
+    
+    #one:checked~.button-label.one {
+        width: 35px;
+    }
+    
+    #two:checked~.button-label.two {
+        width: 35px;
+    }
+    
+    #two:checked~.button-label.one {
+        width: 15px;
+    }
+    
+    #one:checked~.button-label.two {
+        width: 15px;
     }
